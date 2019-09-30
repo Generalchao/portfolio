@@ -14,7 +14,7 @@ function setupData() {
     products.forEach(function(product) {
       var productTitle = product.get('title');
       var productDescription = product.get('description');
-      var releaseTime = (product.createdAt.getMonth() + 1) + '/' + product.createdAt.getDate() + '/' +  product.createdAt.getFullYear();
+      var releaseTime = (product.createdAt.getFullYear() + '/' + product.createdAt.getMonth() + 1) + '/' + product.createdAt.getDate() + '  ' + product.createdAt.getHours()+ ':' +product.createdAt.getMinutes() ;
       var ownerUsername = product.get('owner').get('username');
       var productImage = product.get('image');
       var productImageUrl;
