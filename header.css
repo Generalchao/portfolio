@@ -1,4 +1,6 @@
 /* Everything but the jumbotron gets side spacing for mobile first views */
+@import url('https://fonts.font.im/css?family=Source+Sans+Pro');
+body{font-size: 16px;font-family: 'Source Sans Pro', sans-serif;color: #495057;}
 .header,
 .marketing,
 .footer {
