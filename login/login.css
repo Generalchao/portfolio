@@ -23,6 +23,7 @@ body {
   justify-content: center;
   padding: 1rem 0;
 }
+.container{width: 100%;}
 .card-title{
   font-size: 18px;
   line-height: 1.2;
