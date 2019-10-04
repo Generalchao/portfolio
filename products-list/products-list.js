@@ -3,6 +3,12 @@ var context = {
   products: []
 };
 
+function deleteData(){
+  var product = AV.Object.createWithoutData('objectId', objectId);
+  product.destroy();
+  setupData();
+}
+
 function setupData() {
   // LeanCloud - 查询
   // https://leancloud.cn/docs/leanstorage_guide-js.html#查询
