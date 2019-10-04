@@ -21,6 +21,13 @@
     <script type="text/javascript" src="./../initLeanCloud.js"></script>
     <script type="text/javascript" src="./../reuseMethods.js"></script>
     <script type="text/javascript" src="new-product.js"></script>
+
+    <style type="text/css">   
+      .box{width: 600px;margin: 0px auto;padding: 50px 5px 5px 5px;}
+      .upload{text-align:center;background: #f2f2f2;position: relative;}
+      .upload:hover{background:#21292f;color:#ffffff; }
+      .upload input{opacity:0;position: absolute;top: -1px;left: -1px;width: 100%;}
+    </style>
   </head>
   <body>
     <div class="login-page">
@@ -45,7 +52,11 @@
 
           <div class="form-group">
             <label for="inputFile" class="form-label">上传图片</label>
-            <input type="file" id="inputFile" class="form-control" placeholder="文件" required>
+              <p>
+                <div class="upload imgLog3">
+                <span><i class="glyphicon glyphicon-open"></i> 选择图片</span>   </div>
+            </p>
+            <!-- <input type="file" id="inputFile" class="form-control" placeholder="文件" required> -->
           </div>
 
           <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
@@ -54,5 +65,47 @@
       </div> <!-- /container -->
     </div>
 
+  <script>
+function ImgUpload(node,width,height,linHeight){
+  var _this = this;
+  this._node = node;
+  this.width = width + '%';
+  this.height = height + 'px';
+  this.linHeight = linHeight + 'px';
+  this.setCss();
+  this.createFile();
+}
+
+ImgUpload.prototype.createFile = function(){
+  $(this._node).append('<input type="file" id="inputFile" placeholder="文件" required>')
+}
+
+ImgUpload.prototype.setCss = function(){
+    $(this._node).css({
+      "width":this.width,
+      "height":this.height,
+      "line-height":this.linHeight,
+    })
+}
+
+ImgUpload.prototype.setSpan = function(_this){
+  $(_this).siblings().css("opacity",0);
+}
+
+    
+    $(function(){
+      var img3 = new ImgUpload('.imgLog3',100,200,200);
+
+            $(document).on('change',".imgLog3 input",function(e){
+          //模拟后台返回url
+          var url = window.URL.createObjectURL(e.target.files[0]);
+          $(this).parent().css('background','url('+url+')0% 0% / cover')
+                
+          img3.setSpan(this)
+      })            
+
+    })
+
+  </script>
   </body>
 </html>
