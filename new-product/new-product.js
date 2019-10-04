@@ -32,7 +32,7 @@ function releaseNewProduct() {
 
 $(function() {
   if (isCurrentUser()) {
-    $(".new-product").on('submit', function(e) {
+    $(".form-signin").on('submit', function(e) {
       e.preventDefault();
       releaseNewProduct();
     });
