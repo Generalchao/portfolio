@@ -39,7 +39,7 @@
         <h3 class="text-muted">Portfolios</h3>
       </div>
       <div>
-        <a class="btn btn-primary new-product" href="./../new-product/new-product.html">+Add New</a>
+        <a class="btn btn-primary new-product" href="./../new-product/new-product.html">+ Add New</a>
       </div>
       <div class="row products-detail">
         <!-- Products list content -->
@@ -53,8 +53,8 @@
                 <p>{{{productDescription}}}</p>
                 <p>来自：{{{ownerUsername}}}</p>
                 <p>发布时间：{{{releaseTime}}}</p>   
-                <a class="deletebtn" href="#" onclick="deleteData()">Delete</a>
-                <a class="copybtn" href="#" data-clipboard-text={{productImageUrl}} >Copy</a>
+                <a class="deletebtn" onclick="deleteData()">Delete</a>
+                <a class="copybtn" data-clipboard-text={{productImageUrl}} >Copy</a>
               </div>
             </div>
           </div>
