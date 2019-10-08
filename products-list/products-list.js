@@ -62,3 +62,18 @@ $(function() {
     window.location.href = "./../login/login.html";
   }
 });
+
+
+// copy功能
+
+var clipboard = new ClipboardJS('.copybtn');
+
+clipboard.on('success', function(e) {
+    console.log(e);
+    alert("Copied");
+});
+
+clipboard.on('error', function(e) {
+    console.log(e);
+    alert("Error!");
+});

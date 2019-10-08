@@ -18,6 +18,8 @@
     
     <!-- handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <!-- copy插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="./../header.css" rel="stylesheet">
@@ -50,9 +52,9 @@
                 <h3>{{{productTitle}}}</h3>
                 <p>{{{productDescription}}}</p>
                 <p>来自：{{{ownerUsername}}}</p>
-                <p>发布时间：{{{releaseTime}}}</p>
-                <p>链接地址：{{productImageUrl}}</p>    
-                <a id="deletebtn" href="#" onclick="deleteData()">Delete</a>
+                <p>发布时间：{{{releaseTime}}}</p>   
+                <a class="deletebtn" href="#" onclick="deleteData()">Delete</a>
+                <a class="copybtn" href="#" data-clipboard-text={{productImageUrl}} >Copy</a>
               </div>
             </div>
           </div>
