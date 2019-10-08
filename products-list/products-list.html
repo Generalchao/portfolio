@@ -54,7 +54,7 @@
                 <p>来自：{{{ownerUsername}}}</p>
                 <p>发布时间：{{{releaseTime}}}</p>   
                 <button class="deletebtn" onclick="deleteData()">Delete</button>
-                <button class="copybtn" data-clipboard-text={{productImageUrl}} >Copy</button>
+                <button class="copybtn" data-clipboard-text={{productImageUrl}} >Copy link</button>
               </div>
             </div>
           </div>
@@ -62,6 +62,23 @@
         </script>
       </div>
     </div> <!-- /container -->
+
+    <script type="text/javascript">
+      
+      // copy功能
+
+      var clipboard = new ClipboardJS('.copybtn');
+
+      clipboard.on('success', function(e) {
+          console.log(e);
+          alert("Copied");
+      });
+
+      clipboard.on('error', function(e) {
+          console.log(e);
+          alert("Error!");
+      });
+    </script>
 
   </body>
 </html>
