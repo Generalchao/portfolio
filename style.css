@@ -20,6 +20,8 @@ body {
   height: 100%;
   min-height: 100%;
 }
+body.login{background: url('http://lc-A2aR83iQ.cn-n1.lcfile.com/669b49be28b79d37171f.jpg') 0% 0% / cover;}
+body.signup{background: url('http://lc-A2aR83iQ.cn-n1.lcfile.com/669b49be28b79d37171f.jpg') 0% 0% / cover;}
 a{color: var(--main-color);}
 a:hover{color: var(--main-color);}
 .login-page{
